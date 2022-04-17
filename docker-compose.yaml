@@ -1,0 +1,34 @@
+version: '3.1'
+
+services:
+  blog_nginx:
+    build: ./docker/nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/conf:/etc/nginx/
+      - ./docker/nginx/logs:/var/log/nginx/
+      - ./src/blog:/usr/share/nginx/html/
+  blog_fpm:
+    build: ./docker/php
+    user: "www-data:www-data"
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./src/blog:/var/www/html/
+  blog_composer:
+    build: ./docker/composer
+    volumes:
+      - ${LOCAL_PATH}:/app
+    command: composer ${COMMAND}
+  blog_db:
+    build: ./docker/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+  blog_adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

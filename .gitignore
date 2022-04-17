@@ -1,0 +1,14 @@
+/src/blog/node_modules
+/src/blog/public/hot
+/src/blog/public/storage
+/src/blog/storage/*.key
+/src/blog/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
