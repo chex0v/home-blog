@@ -3,6 +3,7 @@
 /src/blog/public/storage
 /src/blog/storage/*.key
 /src/blog/vendor
+/docker/nginx/logs
 .env
 .env.backup
 .phpunit.result.cache
