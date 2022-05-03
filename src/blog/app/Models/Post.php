@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 
 /**
  * @class Post
  * @property int $id Идентификатор
  * @property string $title Название
  * @property string $text Описание
+ * @property string $annotation Аннотация
  */
 class Post extends Model
 {
@@ -22,4 +24,20 @@ class Post extends Model
      * @var string
      */
     protected $table = 'blog';
+
+     /**
+     * The "booted" method of the model.
+     *
+     * @return void
+     */
+    protected static function booted()
+    {
+        $slugFunc = function(Post $post) {
+            if (!$post->slug) {
+                $post->slug = Str::slug($post->title, '-');
+            }
+        };
+        static::creating($slugFunc);
+        static::updating($slugFunc);
+    }
 }

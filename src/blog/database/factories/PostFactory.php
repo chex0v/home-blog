@@ -16,6 +16,7 @@ class PostFactory extends Factory
         return [
             'title' => $this->faker->name(),
             'text' => $this->faker->text(),
+            'annotation' => $this->faker->text()
         ];
     }
 } 

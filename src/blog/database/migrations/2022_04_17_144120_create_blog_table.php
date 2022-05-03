@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('blog', function (Blueprint $table) {
             $table->id();
             $table->string('title')->comment('Название статьи');
+            $table->string('slug')->comment('Slug');
+            $table->string('annotation')->nullable()->comment('Аннотация');
             $table->text('text')->comment('Описание статьи');
             $table->unsignedBigInteger('category_id')->comment('Категория')->default(0);
             $table->softDeletes();

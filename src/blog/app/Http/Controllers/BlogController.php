@@ -9,7 +9,12 @@ class BlogController extends Controller
 {
   public function index()
   {
-    $posts = new PostResourceCollection(Post::paginate());
+    $posts = Post::paginate(5);
     return view('pages/blog/list', compact('posts'));   
+  }
+
+  public function show(Post $post)
+  {
+    return view('pages/blog/show', compact('post')); 
   }
 }

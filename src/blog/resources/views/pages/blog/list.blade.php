@@ -13,14 +13,23 @@
                     <div class="card-content">
                         <span class="card-title">{{ $post->title }}</span>
                         <div class="post__body">
-                            {{ $post->text }}
+                            {{ $post->annotation }}
                         </div>
                     </div>
                     <div class="card-action">
-                        <a href="!#">Читать</a>
+                        <a href="{{ route('blog.detail', $post->slug) }}">Читать</a>
                     </div>
                 </div>
             </div>
         </div>
     @endforeach
+    <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
 @endsection

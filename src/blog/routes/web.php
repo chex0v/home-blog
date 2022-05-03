@@ -24,4 +24,5 @@ Route
     ->name('blog.')
     ->group(function () {
     Route::get('/blog', 'index')->name('list');
+    Route::get('/blog/{post:slug}', 'show')->name('detail');
 });
