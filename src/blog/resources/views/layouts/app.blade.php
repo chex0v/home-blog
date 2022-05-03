@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chexov - @yield('title')</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/materialize.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
 </head>
@@ -12,10 +13,10 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper navbar__wrapper">
-                <a href="/" class="brand-logo navbar__title">Chexov</a>
+                <a href="{{ route('home') }}" class="brand-logo navbar__title">Chexov</a>
                 <ul class="right hide-on-med-and-down navbar__link">
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#!">Блог</a>
+                        <a class="navbar__link" href="{{ route('blog.list') }}">Блог</a>
                     </li>
                 </ul>
             </div>
@@ -35,7 +36,7 @@
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <ul>
-                        <li><a class="grey-text" href="#!">Блог</a></li>
+                        <li><a class="grey-text" href="{{ route('blog.list') }}">Блог</a></li>
                     </ul>
                 </div>
             </div>
