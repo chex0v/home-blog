@@ -7,9 +7,11 @@ use App\Models\Post;
 
 class BlogController extends Controller
 {
+  private $postCount = 20;
+
   public function index()
   {
-    $posts = Post::paginate(5);
+    $posts = Post::orderBy('id', 'desc')->paginate($this->postCount);
     return view('pages/blog/list', compact('posts'));   
   }
 
