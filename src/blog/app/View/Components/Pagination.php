@@ -8,7 +8,8 @@ class Pagination extends Component
 {
 
     public $page;
-    public $count;
+    public $perPage;
+    public $total;
     public $route;
 
     /**
@@ -16,10 +17,11 @@ class Pagination extends Component
      *
      * @return void
      */
-    public function __construct($page = 0, $count = 0, $route = '')
+    public function __construct($page = 0, $perPage = 0, $total = 0, $route = '')
     {
-        $this->page = $page;
-        $this->count = $count;
+        $this->page = (int)$page;
+        $this->perPage = (int)$perPage;
+        $this->total = (int)$total;
         $this->route = $route;
     }
 

@@ -19,6 +19,7 @@
         "sass-loader": "^12.6.0"
     },
     "dependencies": {
+        "highlight.js": "^11.5.1",
         "materialize-css": "^1.0.0-rc.2"
     }
 }

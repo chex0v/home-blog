@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('header-css')
+@section('header_css')
     @parent
 @endsection
 @section('title', 'Главная')

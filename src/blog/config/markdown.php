@@ -47,6 +47,8 @@ return [
     'extensions' => [
         League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension::class,
         League\CommonMark\Extension\Table\TableExtension::class,
+        League\CommonMark\Extension\SmartPunct\SmartPunctExtension::class,
+        League\CommonMark\Extension\Attributes\AttributesExtension::class
     ],
 
     /*
@@ -92,7 +94,7 @@ return [
         'enable_strong'          => true,
         'use_asterisk'           => true,
         'use_underscore'         => true,
-        'unordered_list_markers' => ['-', '+', '*'],
+        'unordered_list_markers' => ['-', '+', '*', "'"],
     ],
 
     /*
@@ -106,7 +108,7 @@ return [
     |
     */
 
-    'html_input' => 'strip',
+    'html_input' => 'allow',
 
     /*
     |--------------------------------------------------------------------------

@@ -7,7 +7,7 @@ use App\Models\Post;
 
 class BlogController extends Controller
 {
-  private $postCount = 20;
+  private $postCount = 7;
 
   public function index()
   {

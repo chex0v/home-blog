@@ -1,9 +1,10 @@
-@if ($count && $page <= $count)
+@if ($total && $total > $perPage)
     @php
         $step = 1;
-        $pages = range(1, $count);
+        $countPage = (int) ceil($total / $perPage);
+        $pages = range(1, $countPage);
         $prev = $page - $step > 0 ? $page - $step : null;
-        $next = $page + $step <= $count ? $page + $step : null;
+        $next = $page + $step <= $countPage ? $page + $step : null;
     @endphp
     <ul class="pagination">
         @if ($prev)
