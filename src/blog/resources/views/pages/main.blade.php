@@ -16,4 +16,5 @@
             </div>
         </div>
     </div>
+    <x-main-last-blog-post />
 @endsection

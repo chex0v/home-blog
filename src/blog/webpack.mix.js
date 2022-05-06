@@ -16,4 +16,6 @@ mix
     .css('resources/css/materialize.css', 'public/css')
     .sass('resources/scss/main.sass', 'public/css')
     .js('resources/js/highlight.js', 'public/js')
+    .js('resources/js/materialize.js', 'public/js')
+    .js('resources/js/main.js', 'public/js')
     .version();
