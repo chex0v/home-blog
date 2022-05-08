@@ -11,10 +11,12 @@
                 <img class="center-image__img" src="/img/dmitrienko.png" />
                 <div class="center-image__text center-align">
                     <h1>Дмитрий Дмитриенко</h1>
-                    <p class="flow-text grey-text">Разработка приложений на Laravel, Vue, NestJS, WinterCMS, OctoberCMS</p>
+                    <p class="flow-text grey-text text-darken-1">Разработка приложений на Laravel, Vue, NestJS, WinterCMS,
+                        OctoberCMS</p>
                 </div>
             </div>
         </div>
     </div>
     <x-main-last-blog-post />
+    <x-feedback-form />
 @endsection

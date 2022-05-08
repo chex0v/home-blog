@@ -16,6 +16,7 @@
                     - стр. {{ $posts->currentPage() }}
                 @endif
             </h1>
+            <hr />
         </div>
     </div>
     @forelse ($posts as $post)
@@ -29,7 +30,7 @@
                         </div>
                     </div>
                     <div class="card-action">
-                        <a href="{{ route('blog.detail', $post->slug) }}">Читать</a>
+                        <a class="red-text" href="{{ route('blog.detail', $post->slug) }}">Читать</a>
                     </div>
                 </div>
             </div>

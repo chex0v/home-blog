@@ -8,11 +8,12 @@
 @section('content')
     <x-breadcrumbs :paths="collect(['Блог' => route('blog.list'), $post->title => null])"></x-breadcrumbs>
     <div class="row">
-        <div class="col s2"></div>
-        <div class="col s8">
+        <div class="col m2 l2"></div>
+        <div class="col s12 m8 l8">
             <h1>{{ $post->title }}</h1>
+            <hr />
         </div>
-        <div class="col s2"></div>
+        <div class="col m2 "></div>
     </div>
     <div class="row">
         <div class="col m1 l2"></div>

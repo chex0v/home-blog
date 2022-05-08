@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\FeedbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,14 @@ Route::get('/', function () {
     return view('pages/main');
 })->name('home');
 
+Route::get('/about', function() {
+    return view('pages/about');
+})->name('about');
+Route::get('/contact', function() {
+    return view('pages/contacts');
+})->name('contact');
+
+Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback');
 
 Route
     ::controller(BlogController::class)

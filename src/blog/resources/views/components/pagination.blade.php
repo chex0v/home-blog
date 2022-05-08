@@ -15,7 +15,7 @@
             </li>
         @endif
         @foreach ($pages as $number)
-            <li @if ($number === $page) class="active"@else class="waves-effect" @endif>
+            <li @if ($number === $page) class="active red"@else class="waves-effect" @endif>
                 <a href="{{ route($route, ['page' => $number]) }}">{{ $number }}</a>
             </li>
         @endforeach

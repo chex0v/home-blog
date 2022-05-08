@@ -26,9 +26,8 @@ class AppServiceProvider extends ServiceProvider
     {
         View::share('menu', [
             'Блог' => '/blog',
-            'Проекты' => '#!',
-            'Обо мне' => '#!',
-            'Контакты' => '#!'
+            'Обо мне' => '/about',
+            'Контакты' => '/contact'
         ]);
     }
 }

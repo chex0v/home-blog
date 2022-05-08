@@ -15,7 +15,7 @@ $col = (int) ceil(12 / $count);
                         </p>
                     </div>
                     <div class="card-action">
-                        <a href="{{ route('blog.detail', $post->slug) }}">Подробнее</a>
+                        <a class="card-action--red" href="{{ route('blog.detail', $post->slug) }}">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@ $col = (int) ceil(12 / $count);
     </div>
     <div class="row">
         <div class="col s12 center-align">
-            <a class="waves-effect waves-light btn-large" href="{{ $linkAll }}">Все статьи блога</a>
+            <a class="waves-effect waves-light btn-large red" href="{{ $linkAll }}">Все статьи блога</a>
         </div>
     </div>
 @endif
