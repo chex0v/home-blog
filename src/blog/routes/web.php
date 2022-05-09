@@ -35,3 +35,12 @@ Route
     Route::get('/blog', 'index')->name('list');
     Route::get('/blog/{post:slug}', 'show')->name('detail');
 });
+
+Route::name('admin.')->prefix('admin')->group(function() {
+    Route::get('/', function() {
+        return view('pages/admin/main');
+    });
+    Route::get('/login', function() {
+        return view('pages/admin/login');
+    });
+});
