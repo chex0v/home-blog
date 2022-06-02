@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\BlogController as AdminBlogController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\Admin;
@@ -32,7 +33,7 @@ Route::name("admin.")
 
         Route::name("blog.")
             ->prefix("blog")
-            ->controller(BlogController::class)
+            ->controller(AdminBlogController::class)
             ->group(function () {
                 Route::get("/", "index")->name("index");
             });
