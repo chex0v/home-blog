@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'key' => env('FLARE_KEY'),
+    "key" => env("FLARE_KEY"),
 
     /*
     |--------------------------------------------------------------------------
@@ -36,7 +36,7 @@ return [
     |
     */
 
-    'flare_middleware' => [
+    "flare_middleware" => [
         RemoveRequestIp::class,
         AddGitInformation::class,
         AddNotifierName::class,
@@ -44,24 +44,20 @@ return [
         AddExceptionInformation::class,
         AddDumps::class,
         AddLogs::class => [
-            'maximum_number_of_collected_logs' => 200,
+            "maximum_number_of_collected_logs" => 200
         ],
         AddQueries::class => [
-            'maximum_number_of_collected_queries' => 200,
-            'report_query_bindings' => true,
+            "maximum_number_of_collected_queries" => 200,
+            "report_query_bindings" => true
         ],
         AddJobs::class => [
-            'max_chained_job_reporting_depth' => 5,
+            "max_chained_job_reporting_depth" => 5
         ],
         CensorRequestBodyFields::class => [
-            'censor_fields' => [
-                'password',
-            ],
+            "censor_fields" => ["password"]
         ],
         CensorRequestHeaders::class => [
-            'headers' => [
-                'API-KEY'
-            ]
+            "headers" => ["API-KEY"]
         ]
     ],
 
@@ -75,5 +71,5 @@ return [
     |
     */
 
-    'send_logs_as_events' => true,
+    "send_logs_as_events" => true
 ];

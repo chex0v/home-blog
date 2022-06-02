@@ -24,10 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('menu', [
-            'Блог' => '/blog',
-            'Обо мне' => '/about',
-            'Контакты' => '/contact'
+        View::share("menu", [
+            "Блог" => "/blog",
+            "Обо мне" => "/about",
+            "Контакты" => "/contact"
         ]);
     }
 }

@@ -23,18 +23,18 @@ class Post extends Model
      *
      * @var string
      */
-    protected $table = 'blog';
+    protected $table = "blog";
 
-     /**
+    /**
      * The "booted" method of the model.
      *
      * @return void
      */
     protected static function booted()
     {
-        $slugFunc = function(Post $post) {
+        $slugFunc = function (Post $post) {
             if (!$post->slug) {
-                $post->slug = Str::slug($post->title, '-');
+                $post->slug = Str::slug($post->title, "-");
             }
         };
         static::creating($slugFunc);

@@ -24,7 +24,7 @@ class FeedbackForm extends Component
     public function render()
     {
         $request = request();
-        $success = $request->has('success');
-        return view('components.feedback-form', compact('success'));
+        $success = $request->has("success");
+        return view("components.feedback-form", compact("success"));
     }
 }

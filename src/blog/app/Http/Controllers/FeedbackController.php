@@ -12,6 +12,6 @@ class FeedbackController extends Controller
     {
         $feedback = Feedback::create($request->validated());
 
-        return back()->with('success', 'Ваше сообщение получено.');
+        return back()->with("success", "Ваше сообщение получено.");
     }
 }

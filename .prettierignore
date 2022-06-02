@@ -1,0 +1,5 @@
+/src/blog/vendor/*
+/src/vendor/*
+/src/blog/public/*
+/src/blog/node_modules/*
+/src/blog/storage/*

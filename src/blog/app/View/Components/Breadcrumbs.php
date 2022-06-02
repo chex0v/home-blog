@@ -25,6 +25,6 @@ class Breadcrumbs extends Component
      */
     public function render()
     {
-        return view('components.breadcrumbs');
+        return view("components.breadcrumbs");
     }
 }

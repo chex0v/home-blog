@@ -23,6 +23,6 @@ class CertificateCarousel extends Component
      */
     public function render()
     {
-        return view('components.certificate-carousel');
+        return view("components.certificate-carousel");
     }
 }

@@ -1,10 +1,11 @@
 {
-    "/js/highlight.js": "/js/highlight.js?id=aa8380ddcf90d1dffc5b9261ec6792ff",
-    "/js/materialize.js": "/js/materialize.js?id=c7102dd5d8e3eaf7b1537f88a5e1d68d",
-    "/js/main.js": "/js/main.js?id=471933e14e14fb98b1beff862b428d81",
-    "/js/app.js": "/js/app.js?id=4e20c51fd96b0503de2d0003e5722695",
-    "/css/materialize.css": "/css/materialize.css?id=33b996d1139c0d579d3bbea1f641b06e",
-    "/css/app.css": "/css/app.css?id=cda6112059796295fda04b44ad8cd676",
-    "/css/tailwind.css": "/css/tailwind.css?id=c6f8ce9c64605c9f43a997125e8894cb",
-    "/css/main.css": "/css/main.css?id=6db96b8f945c908ae90fcf48736475de"
+    "/js/highlight.js": "/js/highlight.js?id=e8d192cacb52976d91e73fa6f71b888c",
+    "/js/materialize.js": "/js/materialize.js?id=7955ec793d746cce01b23740e84cdce7",
+    "/js/main.js": "/js/main.js?id=2338ca4e2b480dad0dd04180b6d9a140",
+    "/js/app.js": "/js/app.js?id=39714dbf946461d683d70fad42469be0",
+    "/js/admin.js": "/js/admin.js?id=abb75f7318f8606f83a5a762b457dfc8",
+    "/css/materialize.css": "/css/materialize.css?id=67b2943fdbb63ae97dc81b4574eb0ff5",
+    "/css/app.css": "/css/app.css?id=66edd874a93a51837276742bcde41385",
+    "/css/admin.css": "/css/admin.css?id=dc789aa40292cd46a219842fb763ca3c",
+    "/css/main.css": "/css/main.css?id=a83fb9b4e986eb887ec2412f09f94f77"
 }

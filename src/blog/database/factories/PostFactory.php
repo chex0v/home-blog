@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 
 class PostFactory extends Factory
 {
-  /**
+    /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
@@ -14,9 +14,9 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->name(),
-            'text' => $this->faker->text(),
-            'annotation' => $this->faker->text()
+            "title" => $this->faker->name(),
+            "text" => $this->faker->text(),
+            "annotation" => $this->faker->text()
         ];
     }
-} 
+}

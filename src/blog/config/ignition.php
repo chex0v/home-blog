@@ -19,7 +19,6 @@ use Spatie\LaravelIgnition\Solutions\SolutionProviders\UnknownValidationSolution
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\ViewNotFoundSolutionProvider;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Editor
@@ -33,7 +32,7 @@ return [
     |
     */
 
-    'editor' => env('IGNITION_EDITOR', 'phpstorm'),
+    "editor" => env("IGNITION_EDITOR", "phpstorm"),
 
     /*
     |--------------------------------------------------------------------------
@@ -46,7 +45,7 @@ return [
     |
     */
 
-    'theme' => env('IGNITION_THEME', 'auto'),
+    "theme" => env("IGNITION_THEME", "auto"),
 
     /*
     |--------------------------------------------------------------------------
@@ -60,7 +59,7 @@ return [
     |
     */
 
-    'enable_share_button' => env('IGNITION_SHARING_ENABLED', true),
+    "enable_share_button" => env("IGNITION_SHARING_ENABLED", true),
 
     /*
     |--------------------------------------------------------------------------
@@ -75,7 +74,7 @@ return [
     |
     */
 
-    'register_commands' => env('REGISTER_IGNITION_COMMANDS', false),
+    "register_commands" => env("REGISTER_IGNITION_COMMANDS", false),
 
     /*
     |--------------------------------------------------------------------------
@@ -88,7 +87,7 @@ return [
     |
     */
 
-    'solution_providers' => [
+    "solution_providers" => [
         // from spatie/ignition
         BadMethodCallSolutionProvider::class,
         MergeConflictSolutionProvider::class,
@@ -108,7 +107,7 @@ return [
         MissingMixManifestSolutionProvider::class,
         MissingLivewireComponentSolutionProvider::class,
         UndefinedViewVariableSolutionProvider::class,
-        GenericLaravelExceptionSolutionProvider::class,
+        GenericLaravelExceptionSolutionProvider::class
     ],
 
     /*
@@ -122,9 +121,7 @@ return [
     |
     */
 
-    'ignored_solution_providers' => [
-
-    ],
+    "ignored_solution_providers" => [],
 
     /*
     |--------------------------------------------------------------------------
@@ -139,7 +136,7 @@ return [
     |
     */
 
-    'enable_runnable_solutions' => env('IGNITION_ENABLE_RUNNABLE_SOLUTIONS', env('APP_DEBUG', false)),
+    "enable_runnable_solutions" => env("IGNITION_ENABLE_RUNNABLE_SOLUTIONS", env("APP_DEBUG", false)),
 
     /*
     |--------------------------------------------------------------------------
@@ -164,8 +161,8 @@ return [
     |
     */
 
-    'remote_sites_path' => env('IGNITION_REMOTE_SITES_PATH', base_path()),
-    'local_sites_path' => env('IGNITION_LOCAL_SITES_PATH', ''),
+    "remote_sites_path" => env("IGNITION_REMOTE_SITES_PATH", base_path()),
+    "local_sites_path" => env("IGNITION_LOCAL_SITES_PATH", ""),
 
     /*
     |--------------------------------------------------------------------------
@@ -177,7 +174,7 @@ return [
     |
     */
 
-    'housekeeping_endpoint_prefix' => '_ignition',
+    "housekeeping_endpoint_prefix" => "_ignition",
 
     /*
     |--------------------------------------------------------------------------
@@ -202,6 +199,5 @@ return [
     | Default value: '' (empty string)
     */
 
-    'settings_file_path' => '',
-
+    "settings_file_path" => ""
 ];

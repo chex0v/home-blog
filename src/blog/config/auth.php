@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -13,9 +12,9 @@ return [
     |
     */
 
-    'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
+    "defaults" => [
+        "guard" => "web",
+        "passwords" => "users"
     ],
 
     /*
@@ -35,11 +34,11 @@ return [
     |
     */
 
-    'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
+    "guards" => [
+        "web" => [
+            "driver" => "session",
+            "provider" => "users"
+        ]
     ],
 
     /*
@@ -59,11 +58,11 @@ return [
     |
     */
 
-    'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
-        ],
+    "providers" => [
+        "users" => [
+            "driver" => "eloquent",
+            "model" => App\Models\User::class
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
@@ -86,13 +85,13 @@ return [
     |
     */
 
-    'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
+    "passwords" => [
+        "users" => [
+            "provider" => "users",
+            "table" => "password_resets",
+            "expire" => 60,
+            "throttle" => 60
+        ]
     ],
 
     /*
@@ -106,6 +105,5 @@ return [
     |
     */
 
-    'password_timeout' => 10800,
-
+    "password_timeout" => 10800
 ];

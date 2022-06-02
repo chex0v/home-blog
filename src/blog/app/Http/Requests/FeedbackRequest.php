@@ -11,8 +11,8 @@ class FeedbackRequest extends FormRequest
      *
      * @var string
      */
-    protected $redirectRoute = 'home';
-    
+    protected $redirectRoute = "home";
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -31,9 +31,9 @@ class FeedbackRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'string'],
-            'email' => ['required', 'string', 'email'],
-            'text' => ['required', 'string']
+            "name" => ["required", "string"],
+            "email" => ["required", "string", "email"],
+            "text" => ["required", "string"]
         ];
     }
 }

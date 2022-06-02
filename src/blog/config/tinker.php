@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Console Commands
@@ -13,7 +12,7 @@ return [
     |
     */
 
-    'commands' => [
+    "commands" => [
         // App\Console\Commands\ExampleCommand::class,
     ],
 
@@ -28,7 +27,7 @@ return [
     |
     */
 
-    'alias' => [
+    "alias" => [
         //
     ],
 
@@ -43,8 +42,5 @@ return [
     |
     */
 
-    'dont_alias' => [
-        'App\Nova',
-    ],
-
+    "dont_alias" => ["App\Nova"]
 ];

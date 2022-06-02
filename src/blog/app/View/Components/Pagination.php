@@ -6,7 +6,6 @@ use Illuminate\View\Component;
 
 class Pagination extends Component
 {
-
     public $page;
     public $perPage;
     public $total;
@@ -17,11 +16,11 @@ class Pagination extends Component
      *
      * @return void
      */
-    public function __construct($page = 0, $perPage = 0, $total = 0, $route = '')
+    public function __construct($page = 0, $perPage = 0, $total = 0, $route = "")
     {
-        $this->page = (int)$page;
-        $this->perPage = (int)$perPage;
-        $this->total = (int)$total;
+        $this->page = (int) $page;
+        $this->perPage = (int) $perPage;
+        $this->total = (int) $total;
         $this->route = $route;
     }
 
@@ -32,6 +31,6 @@ class Pagination extends Component
      */
     public function render()
     {
-        return view('components.pagination');
+        return view("components.pagination");
     }
 }

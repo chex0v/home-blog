@@ -14,8 +14,5 @@ class Feedback extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name', 'email', 'text'
-    ];
-
+    protected $fillable = ["name", "email", "text"];
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FeedbackController;
 
 /*
@@ -15,32 +16,38 @@ use App\Http\Controllers\FeedbackController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages/main');
-})->name('home');
+Route::get("/", function () {
+    return view("pages/main");
+})->name("home");
 
-Route::get('/about', function() {
-    return view('pages/about');
-})->name('about');
-Route::get('/contact', function() {
-    return view('pages/contacts');
-})->name('contact');
+Route::get("/about", function () {
+    return view("pages/about");
+})->name("about");
+Route::get("/contact", function () {
+    return view("pages/contacts");
+})->name("contact");
 
-Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback');
+Route::post("/feedback", [FeedbackController::class, "store"])->name("feedback");
 
-Route
-    ::controller(BlogController::class)
-    ->name('blog.')
+Route::controller(BlogController::class)
+    ->name("blog.")
     ->group(function () {
-    Route::get('/blog', 'index')->name('list');
-    Route::get('/blog/{post:slug}', 'show')->name('detail');
-});
+        Route::get("/blog", "index")->name("list");
+        Route::get("/blog/{post:slug}", "show")->name("detail");
+    });
 
-Route::name('admin.')->prefix('admin')->group(function() {
-    Route::get('/', function() {
-        return view('pages/admin/main');
+Route::name("admin.")
+    ->prefix("admin")
+    ->group(function () {
+        Route::get("/", function () {
+            return view("pages/admin/main");
+        })->name("index");
+
+        Route::name("login.")
+            ->prefix("login")
+            ->controller(LoginController::class)
+            ->group(function () {
+                Route::get("/", "index")->name("index");
+                Route::post("/", "authenticate")->name("authenticate");
+            });
     });
-    Route::get('/login', function() {
-        return view('pages/admin/login');
-    });
-});

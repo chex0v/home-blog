@@ -25,8 +25,10 @@ class MainLastBlogPost extends Component
      */
     public function render()
     {
-        $posts = Post::orderBy('id', 'desc')->take($this->count)->get();
-        $linkAll = route('blog.list');
-        return view('components.main-last-blog-post', compact('posts', 'linkAll'));
+        $posts = Post::orderBy("id", "desc")
+            ->take($this->count)
+            ->get();
+        $linkAll = route("blog.list");
+        return view("components.main-last-blog-post", compact("posts", "linkAll"));
     }
 }
