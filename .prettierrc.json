@@ -1,4 +1,5 @@
 {
+    "plugins": ["@shufo/prettier-plugin-blade"],
     "printWidth": 120,
     "tabWidth": 4,
     "bracketSameLine": false,
@@ -8,6 +9,13 @@
     "embeddedLanguageFormatting": "auto",
     "singleAttributePerLine": true,
     "overrides": [
+         {
+            "files": "*.blade.php",
+            "options": {
+                "printWidth": 180,
+                "tabWidth": 2
+            }
+        },
         {
             "files": "*.php",
             "options": {

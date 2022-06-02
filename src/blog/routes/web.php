@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BlogController;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,35 @@ use App\Http\Controllers\FeedbackController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::name("admin.")
+    ->prefix("admin")
+    ->middleware(["auth"])
+    ->group(function () {
+        Route::get("/", function () {
+            return view("pages/admin/main");
+        })->name("index");
+
+        Route::get("/logout", function () {
+            Auth::logout();
+            return redirect()->route("admin.login.index");
+        })->name("logout");
+
+        Route::name("blog.")
+            ->prefix("blog")
+            ->controller(BlogController::class)
+            ->group(function () {
+                Route::get("/", "index")->name("index");
+            });
+
+        Route::name("login.")
+            ->prefix("login")
+            ->withoutMiddleware(["auth"])
+            ->controller(LoginController::class)
+            ->group(function () {
+                Route::get("/", "index")->name("index");
+                Route::post("/", "authenticate")->name("authenticate");
+            });
+    });
 
 Route::get("/", function () {
     return view("pages/main");
@@ -34,20 +65,4 @@ Route::controller(BlogController::class)
     ->group(function () {
         Route::get("/blog", "index")->name("list");
         Route::get("/blog/{post:slug}", "show")->name("detail");
-    });
-
-Route::name("admin.")
-    ->prefix("admin")
-    ->group(function () {
-        Route::get("/", function () {
-            return view("pages/admin/main");
-        })->name("index");
-
-        Route::name("login.")
-            ->prefix("login")
-            ->controller(LoginController::class)
-            ->group(function () {
-                Route::get("/", "index")->name("index");
-                Route::post("/", "authenticate")->name("authenticate");
-            });
     });

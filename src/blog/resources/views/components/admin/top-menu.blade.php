@@ -12,13 +12,24 @@
                     <div class="hamburger_menu__line hamburger_menu__bottom"></div>
                 </label>
             </div>
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__list_item">
-                        <a href="/pages/blog.html" class="header__link">Блог</a>
-                    </li>
-                </ul>
-            </nav>
+            @auth
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list_item">
+                            <a href="{{route('admin.blog.index')}}" class="header__link">Блог</a>
+                        </li>
+                        <p>|</p>
+                        <li class="header__list_item">
+                            <p class="header__link">
+                                {{ Auth::user()->name }}
+                            </p>
+                        </li>
+                        <li class="header__list_item">
+                            <a href="{{ route('admin.logout') }}" class="header__link">Выйти</a>
+                        </li>
+                    </ul>
+                </nav>
+            @endauth
         </div>
     </div>
 </header>
