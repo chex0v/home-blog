@@ -9,7 +9,7 @@
     "embeddedLanguageFormatting": "auto",
     "singleAttributePerLine": true,
     "overrides": [
-         {
+        {
             "files": "*.blade.php",
             "options": {
                 "printWidth": 180,

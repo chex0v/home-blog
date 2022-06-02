@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('header_css')
     @parent
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link
+        href="{{ mix('css/app.css') }}"
+        rel="stylesheet"
+    >
 @endsection
 @section('title', 'Блог')
 
@@ -19,12 +22,15 @@
         <div class="col m1 l2"></div>
         <div class="col s12 m10 l8 flow-text">
             @markdown
-            {{ $post->text }}
+                {{ $post->text }}
             @endmarkdown
         </div>
         <div class="col m1 l2"></div>
     </div>
 @endsection
 @section('footer_js')
-    <script src="{{ mix('js/highlight.js') }}" defer></script>
+    <script
+        src="{{ mix('js/highlight.js') }}"
+        defer
+    ></script>
 @endsection

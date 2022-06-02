@@ -3,8 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <link
+        href="{{ asset('css/admin.css') }}"
+        rel="stylesheet"
+    >
     <title>Админка</title>
 </head>
 
@@ -13,7 +19,7 @@
     <main>
         <section class="central">
             <div class="container">
-               @yield('content')
+                @yield('content')
             </div>
         </section>
 

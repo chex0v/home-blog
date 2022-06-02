@@ -7,68 +7,101 @@
             <ul class="top__items">
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Периодический возмущающий фактор: методология и особенности
                     </a>
                 </li>
 
             </ul>
             <div class="top__all">
-                <a href="#!" class="top__link">Все</a>
+                <a
+                    href="#!"
+                    class="top__link"
+                >Все</a>
             </div>
         </div>
     </div>
@@ -80,68 +113,101 @@
             <ul class="top__items">
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
                 <li class="top__item">
-                    <a href="#!" class="top__link">
+                    <a
+                        href="#!"
+                        class="top__link"
+                    >
                         Можно сделать сайт?
                     </a>
                 </li>
 
             </ul>
             <div class="top__all">
-                <a href="#!" class="top__link">Все</a>
+                <a
+                    href="#!"
+                    class="top__link"
+                >Все</a>
             </div>
         </div>
     </div>

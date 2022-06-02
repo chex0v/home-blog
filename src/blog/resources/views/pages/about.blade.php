@@ -25,7 +25,10 @@
 
             <p class="flow-text">Для frontend часто использую Vue.</p>
 
-            <p class="flow-text">Закончил <a target="_blank" href="https://www.vstu.ru/">ВолгГТУ</a> по специальности
+            <p class="flow-text">Закончил <a
+                    target="_blank"
+                    href="https://www.vstu.ru/"
+                >ВолгГТУ</a> по специальности
                 "Программное обеспечение
                 автоматизированных систем",
                 получил степень магистра.</p>

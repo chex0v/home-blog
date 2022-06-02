@@ -30,7 +30,10 @@
                         </div>
                     </div>
                     <div class="card-action">
-                        <a class="red-text" href="{{ route('blog.detail', $post->slug) }}">Читать</a>
+                        <a
+                            class="red-text"
+                            href="{{ route('blog.detail', $post->slug) }}"
+                        >Читать</a>
                     </div>
                 </div>
             </div>
@@ -44,7 +47,12 @@
     @endforelse
     <div class="row">
         <div class="col s12">
-            <x-pagination :page="$posts->currentPage()" :per-page="$posts->perPage()" :total="$posts->total()" :route="'blog.list'" />
+            <x-pagination
+                :page="$posts->currentPage()"
+                :per-page="$posts->perPage()"
+                :total="$posts->total()"
+                :route="'blog.list'"
+            />
         </div>
     </div>
 @endsection
