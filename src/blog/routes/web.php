@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\Admin;
+use App\Http\Controllers\Admin\AdminIndex;
 use App\Models\Post;
 
 /** admin pages */
@@ -15,20 +16,7 @@ Route::name("admin.")
     ->middleware(["auth"])
     ->group(function () {
         // admin.index /admin
-        Route::get("/", function () {
-            $records = Post::orderBy("id", "desc")
-                ->limit(10)
-                ->get()
-                ->map(function ($item) {
-                    return (object) [
-                        "link" => route("admin.blog.detail", $item->slug),
-                        "title" => $item->title
-                    ];
-                });
-            $linkAll = route("admin.blog.list");
-            $title = "Последнии статьи блога";
-            return view("pages/admin/main", compact("records", "linkAll", "title"));
-        })->name("index");
+        Route::get("/", AdminIndex::class);
         // admin.logout /admin/logout
         Route::get("/logout", function () {
             Auth::logout();
@@ -62,31 +50,29 @@ Route::name("admin.")
     });
 
 /** default pages */
-Route::group(function () {
-    // home
-    Route::get("/", function () {
-        return view("pages/main");
-    })->name("home");
+// home
+Route::get("/", function () {
+    return view("pages/main");
+})->name("home");
 
-    // about
-    Route::get("/about", function () {
-        return view("pages/about");
-    })->name("about");
+// about
+Route::get("/about", function () {
+    return view("pages/about");
+})->name("about");
 
-    // contract
-    Route::get("/contact", function () {
-        return view("pages/contacts");
-    })->name("contact");
+// contract
+Route::get("/contact", function () {
+    return view("pages/contacts");
+})->name("contact");
 
-    // feedback
-    Route::post("/feedback", [FeedbackController::class, "store"])->name("feedback");
+// feedback
+Route::post("/feedback", [FeedbackController::class, "store"])->name("feedback");
 
-    Route::controller(BlogController::class)
-        ->name("blog.")
-        ->group(function () {
-            // blog.list
-            Route::get("/blog", "index")->name("list");
-            // blog.detail
-            Route::get("/blog/{post:slug}", "show")->name("detail");
-        });
-});
+Route::controller(BlogController::class)
+    ->name("blog.")
+    ->group(function () {
+        // blog.list
+        Route::get("/blog", "index")->name("list");
+        // blog.detail
+        Route::get("/blog/{post:slug}", "show")->name("detail");
+    });
