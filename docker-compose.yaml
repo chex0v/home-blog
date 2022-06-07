@@ -16,6 +16,8 @@ services:
             - "9000:9000"
         volumes:
             - ./src/blog:/var/www/html/
+        links:
+            - "blog_db:blog"
     blog_composer:
         build: ./docker/composer
         volumes:
@@ -33,3 +35,5 @@ services:
         restart: always
         ports:
             - 8080:8080
+        links:
+            - "blog_db:blog"

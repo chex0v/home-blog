@@ -7,25 +7,29 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\Admin;
+use App\Models\Post;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+/** admin pages */
 Route::name("admin.")
     ->prefix("admin")
     ->middleware(["auth"])
     ->group(function () {
+        // admin.index /admin
         Route::get("/", function () {
-            return view("pages/admin/main");
+            $records = Post::orderBy("id", "desc")
+                ->limit(10)
+                ->get()
+                ->map(function ($item) {
+                    return (object) [
+                        "link" => route("admin.blog.detail", $item->slug),
+                        "title" => $item->title
+                    ];
+                });
+            $linkAll = route("admin.blog.list");
+            $title = "Последнии статьи блога";
+            return view("pages/admin/main", compact("records", "linkAll", "title"));
         })->name("index");
-
+        // admin.logout /admin/logout
         Route::get("/logout", function () {
             Auth::logout();
             return redirect()->route("admin.login.index");
@@ -35,7 +39,16 @@ Route::name("admin.")
             ->prefix("blog")
             ->controller(AdminBlogController::class)
             ->group(function () {
+                // admin.blog.index /admin/blog
                 Route::get("/", "index")->name("index");
+                // admin.blog.detail /admin/blog/post/{post}
+                Route::get("/post/{post:slug}", function (Post $post) {
+                    dd($post);
+                })->name("detail");
+                // admin.blog.list /admin/blog/posts
+                Route::get("/posts", function () {
+                    dd("posts");
+                })->name("list");
             });
 
         Route::name("login.")
@@ -48,22 +61,32 @@ Route::name("admin.")
             });
     });
 
-Route::get("/", function () {
-    return view("pages/main");
-})->name("home");
+/** default pages */
+Route::group(function () {
+    // home
+    Route::get("/", function () {
+        return view("pages/main");
+    })->name("home");
 
-Route::get("/about", function () {
-    return view("pages/about");
-})->name("about");
-Route::get("/contact", function () {
-    return view("pages/contacts");
-})->name("contact");
+    // about
+    Route::get("/about", function () {
+        return view("pages/about");
+    })->name("about");
 
-Route::post("/feedback", [FeedbackController::class, "store"])->name("feedback");
+    // contract
+    Route::get("/contact", function () {
+        return view("pages/contacts");
+    })->name("contact");
 
-Route::controller(BlogController::class)
-    ->name("blog.")
-    ->group(function () {
-        Route::get("/blog", "index")->name("list");
-        Route::get("/blog/{post:slug}", "show")->name("detail");
-    });
+    // feedback
+    Route::post("/feedback", [FeedbackController::class, "store"])->name("feedback");
+
+    Route::controller(BlogController::class)
+        ->name("blog.")
+        ->group(function () {
+            // blog.list
+            Route::get("/blog", "index")->name("list");
+            // blog.detail
+            Route::get("/blog/{post:slug}", "show")->name("detail");
+        });
+});

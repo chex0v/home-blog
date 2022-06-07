@@ -8,15 +8,15 @@
         >
             @csrf
             <label class="login__label">
-                <span class="login__text_label">Email</span>
+                <span class="login__text_label">Логин</span>
                 <input
                     class="login__input_text"
-                    type="email"
-                    name="email"
-                    placeholder="Введите почту"
-                    value="{{ old('email') }}"
+                    type="text"
+                    name="name"
+                    placeholder="Введите логин"
+                    value="{{ old('name') }}"
                 />
-                @error('email')
+                @error('name')
                     <span class="login__error">{{ $message }}</span>
                 @enderror
             </label>
