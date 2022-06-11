@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\PostResourceCollection;
 use App\Models\Post;
+use App\Http\Resources\FeedbackResource;
+use App\Models\Feedback;
 
 class AdminIndex extends Controller
 {
@@ -22,6 +24,11 @@ class AdminIndex extends Controller
                 ->limit(10)
                 ->get()
         );
-        return view("pages/admin/main", compact("records"));
+        $feedback = new FeedbackResource(
+            Feedback::orderBy("id", "desc")
+                ->limit(10)
+                ->get()
+        );
+        return view("pages/admin/main", compact("records", "feedback"));
     }
 }

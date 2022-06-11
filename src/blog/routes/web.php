@@ -16,7 +16,7 @@ Route::name("admin.")
     ->middleware(["auth"])
     ->group(function () {
         // admin.index /admin
-        Route::get("/", AdminIndex::class);
+        Route::get("/", AdminIndex::class)->name("index");
         // admin.logout /admin/logout
         Route::get("/logout", function () {
             Auth::logout();
