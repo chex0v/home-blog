@@ -3,23 +3,20 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\Post;
 
-class AdminTop extends Component
+class PostListPreview extends Component
 {
-    public $title;
-    public $records;
-    public $linkAll;
+    private $post = null;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($title, $records, $linkAll)
+    public function __construct(Post $post)
     {
-        $this->title = $title;
-        $this->records = $records;
-        $this->linkAll = $linkAll;
+        $this->post = $post;
     }
 
     /**
@@ -29,6 +26,6 @@ class AdminTop extends Component
      */
     public function render()
     {
-        return view("components.admin.admin-top");
+        return view("components.admin.post-list-preview", ["post" => $this->post]);
     }
 }

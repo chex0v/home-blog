@@ -18,6 +18,7 @@ class PostResource extends JsonResource
             "id" => $this->id,
             "title" => $this->title,
             "text" => $this->text,
+            "annotation" => $this->annotation,
             "link" => route("admin.blog.detail", $this->slug)
         ];
     }
