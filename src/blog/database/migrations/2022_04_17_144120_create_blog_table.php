@@ -25,6 +25,10 @@ return new class extends Migration {
                 ->unsignedBigInteger("category_id")
                 ->comment("Категория")
                 ->default(0);
+            $table
+                ->boolean("published")
+                ->default(false)
+                ->comment("Опубликовано");
             $table->softDeletes();
             $table->timestamps();
         });

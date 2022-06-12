@@ -10,6 +10,8 @@ use Illuminate\Support\Str;
 /**
  * @class Post
  * @property int $id Идентификатор
+ * @property boolean $published Опубликовано
+ * @property string $slug Слаг
  * @property string $title Название
  * @property string $text Описание
  * @property string $annotation Аннотация
